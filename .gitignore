@@ -1,7 +1,7 @@
 *.pyc
 .pydevproject
 ext_lib
-env
+# env
 *.pyo
 *.a
 *.o
