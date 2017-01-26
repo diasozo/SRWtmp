@@ -1007,9 +1007,11 @@ void get_walltime_(double* wcTime) {
 */
 
 void get_walltime_(double* wcTime) {
-  clock_t tp;
-  tp = clock();
-  *wcTime = (double)(((float)tp)/CLOCKS_PER_SEC);
+    clock_t tp;
+    tp = clock();
+    *wcTime = (double)(((float)tp)/CLOCKS_PER_SEC);
+    // cout << "=== clock = " << tp << "   CLOCKS_PER_SEC = " << CLOCKS_PER_SEC << "\n";
+    // cout << "=== *wcTime = " << *wcTime << "\n";
 }
 
 EXP void CALL get_walltime(double* wcTime) {
