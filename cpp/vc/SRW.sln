@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SRWLIB", "SRWLIB.vcxproj", "{A7E707A6-D325-42AE-A0D0-3C97C38D36A6}"
 EndProject
@@ -100,7 +100,6 @@ Global
 		{0D473386-2B3E-4586-8516-DD4DCF6D4E1E}.Release|Win32.ActiveCfg = Release|Win32
 		{0D473386-2B3E-4586-8516-DD4DCF6D4E1E}.Release|Win32.Build.0 = Release|Win32
 		{0D473386-2B3E-4586-8516-DD4DCF6D4E1E}.Release|x64.ActiveCfg = Release|x64
-		{0D473386-2B3E-4586-8516-DD4DCF6D4E1E}.Release|x64.Build.0 = Release|x64
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Debug_Py2x|Mixed Platforms.ActiveCfg = Debug|Win32
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Debug_Py2x|Mixed Platforms.Build.0 = Debug|Win32
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Debug_Py2x|Win32.ActiveCfg = Debug|Win32
@@ -124,7 +123,6 @@ Global
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Release|Win32.ActiveCfg = Release|Win32
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Release|Win32.Build.0 = Release|Win32
 		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Release|x64.ActiveCfg = Release|x64
-		{AA6DEE02-E699-4AF6-A8FC-655906C9CDC9}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,3 +10,4 @@ ext_lib
 .project
 build_all_forsimex
 copy_source
+.idea/*
