@@ -25,7 +25,8 @@
 #include "srgsnbm.h"
 #include "srpersto.h"
 #include "srpowden.h"
-#include <sys/time.h>
+// #include <sys/time.h>
+#include <time.h>
 
 //-------------------------------------------------------------------------
 // Global Variables (used in SRW/SRWLIB, some may be obsolete)
@@ -997,11 +998,18 @@ EXP int CALL srwlPropagRadMultiE(SRWLStokes* pStokes, SRWLWfr* pWfr0, SRWLOptC* 
 	return 0;
 }
 
-
+/*
 void get_walltime_(double* wcTime) {
   struct timeval tp;
   gettimeofday(&tp, NULL);
   *wcTime = (double)(tp.tv_sec + tp.tv_usec/1000000.0);
+}
+*/
+
+void get_walltime_(double* wcTime) {
+  clock_t tp;
+  tp = clock();
+  *wcTime = (double)(tp);
 }
 
 EXP void CALL get_walltime(double* wcTime) {
