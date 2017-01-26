@@ -309,6 +309,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>..\..\..\Python33_x64\libs\python33.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -336,6 +337,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>..\..\..\Python35_x64\libs\python35.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -431,6 +433,7 @@
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <FloatingPointModel>Precise</FloatingPointModel>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>C:\Python35_x64\libs\python35.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -469,6 +472,7 @@
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <FloatingPointModel>Precise</FloatingPointModel>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>C:\Python35_x64\libs\python35.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -525,6 +529,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>..\..\..\Python27_x64\libs\python27.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -584,6 +589,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <WholeProgramOptimization>false</WholeProgramOptimization>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <AdditionalDependencies>..\..\..\Python27_x64\libs\python27.lib;srw_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
