@@ -1009,7 +1009,7 @@ void get_walltime_(double* wcTime) {
 void get_walltime_(double* wcTime) {
   clock_t tp;
   tp = clock();
-  *wcTime = (double)(tp);
+  *wcTime = (double)(((float)tp)/CLOCKS_PER_SEC);
 }
 
 EXP void CALL get_walltime(double* wcTime) {
