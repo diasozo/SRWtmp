@@ -1,6 +1,3 @@
-﻿.PHONY: all clean core fftw nofftw pylib test
-
-
 # This Makefile is to compile SRW with optional compilation of FFTW-2.1.5.
 #
 # The following options are available:
@@ -12,7 +9,7 @@
 #
 # Updated by Maksim Rakitin (NSLS-II, BNL) on May 2, 2016.
 
-root_dir = $(CURDIR)
+root_dir = $(realpath .)
 env_dir = $(root_dir)/env
 ext_dir = $(root_dir)/ext_lib
 gcc_dir = $(root_dir)/cpp/gcc
@@ -48,7 +45,7 @@ fftw:
 	rm -rf $(ext_dir)/$(fftw_dir);
 
 core: 
-	cd $(gcc_dir); make clean; make -j8 lib
+	cd $(gcc_dir); make -j8 clean lib
 
 pylib:
 	cd $(py_dir); make python
@@ -62,9 +59,8 @@ test:
 	cd $(examples_dir); \
 	timeout 20 python SRWLIB_Example10.py; \
 	code=$$?; \
-	RED='\033[0;31m'; \
-	GREEN='\033[0;32m'; \
-	NC='\033[0m'; \
+	RED=1; \
+	GREEN=2; \
 	if [ $$code -eq 0 ]; then \
 	    status='PASSED'; \
 	    color=$${GREEN}; \
@@ -78,7 +74,12 @@ test:
 	    color=$${RED}; \
 	    message=''; \
 	fi; \
-	echo -e "\n\tTest $${color}$${status}$${NC}. Code=$${code}$${message}\n"; \
+	echo -e -n "\n\tTest "; \
+	tput setaf $${color}; \
+	tput bold; \
+	echo -e -n "$${status}"; \
+	tput sgr0; \
+	echo -e ". Code=$${code}$${message}\n"; \
 	rm -f $(example10_data_dir)/{ex10_res_int_se.dat,ex10_res_int_prop_se.dat,ex10_res_int_prop_me.dat}; \
 	if [ $$remove_tmp_dir -eq 1 ]; then \
 	    cd $(root_dir); \
@@ -88,4 +89,6 @@ test:
 clean:
 	rm -f $(ext_dir)/libfftw.a $(gcc_dir)/libsrw.a $(gcc_dir)/srwlpy*.so; \
 	rm -rf $(ext_dir)/$(fftw_dir)/ py/build/;
-	#if [ -d $(root_dir)/.git ]; then git checkout $(examples_dir)/srwlpy*.so; fi;
+	if [ -d $(root_dir)/.git ]; then rm -f $(examples_dir)/srwlpy*.so && (git checkout $(examples_dir)/srwlpy*.so 2>/dev/null || :); fi;
+
+.PHONY: all clean core fftw nofftw pylib test
