@@ -1,4 +1,11 @@
-on Mac install macports and get the whole gcc toolchain:
+If using anaconda:
+1. Create new 'virtual' environment, install numpy, scipy, matplotlib, mpi4py
+2. Modify lines ~20, 24 to match your environment in the file /SRWtmp/cpp/gcc/Makefile
+3. run 'make all' from base directory SRWtmp
+
+The above worked on macOS 10.13 (High Sierra), python 3.6, 
+
+If using brew or macports:
 sudo port install gcc47
 modify the Makefile so that CC=/path/to/macports/gcc
 and CXX=/path/to/macports/g++
